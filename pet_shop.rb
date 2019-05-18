@@ -90,7 +90,6 @@ def sell_pet_to_customer(pet_shop, pet, customer)
       remove_customer_cash(customer, pet[:price])
       add_or_remove_cash(pet_shop, pet[:price])
       remove_pet_by_name(pet_shop, name)
-      #
     end
   end
 end
