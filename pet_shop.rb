@@ -25,10 +25,20 @@ end
 def pets_by_breed(pet_shop, breed)
 
   pets_of_breed = []
+
   pet_shop[:pets].each { |pet|
     if pet[:breed] == breed
       pets_of_breed.push(pet)
     end
   }
   return(pets_of_breed)
+end
+
+def find_pet_by_name(pet_shop, name)
+  pet_shop[:pets].each { |pet|
+    if pet[:name] == name
+      return pet
+    end
+  }
+  return nil
 end
