@@ -21,3 +21,14 @@ end
 def stock_count(pet_shop)
   return(pet_shop[:pets].count)
 end
+
+def pets_by_breed(pet_shop, breed)
+
+  pets_of_breed = []
+  pet_shop[:pets].each { |pet|
+    if pet[:breed] == breed
+      pets_of_breed.push(pet)
+    end
+  }
+  return(pets_of_breed)
+end
