@@ -23,7 +23,7 @@ def stock_count(pet_shop)
 end
 
 def pets_by_breed(pet_shop, breed)
-
+  # Returns an array
   pets_of_breed = []
 
   pet_shop[:pets].each { |pet|
@@ -51,4 +51,12 @@ end
 
 def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets].push(new_pet)
+end
+
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+def remove_customer_cash(customer, amount)
+  customer[:cash] -= amount
 end
